@@ -1,5 +1,5 @@
 <template>
-  <tab-bar :tab-bar-list="tabBarList" :img-info="tabBarImgInfo"></tab-bar>
+  <tab-bar :tab-bar-list="tabBarList"></tab-bar>
 </template>
 
 <script>
@@ -15,22 +15,20 @@ export default {
       tabBarList: [
         {
           name: '主页',
-          imgName: 'tab-bar',
+          selectImg: '../../static/img/tab-bar/tab-bar-select.png',
+          unselectImg: '../../static/img/tab-bar/tab-bar-unselect.png',
         },
         {
           name: '功能',
-          imgName: 'tab-bar',
+          selectImg: '../../static/img/tab-bar/tab-bar-select.png',
+          unselectImg: '../../static/img/tab-bar/tab-bar-unselect.png', 
         },
         {
           name: '我的',
-          imgName: 'tab-bar',
+          selectImg: '../../static/img/tab-bar/tab-bar-select.png',
+          unselectImg: '../../static/img/tab-bar/tab-bar-unselect.png',
         }
       ],
-      tabBarImgInfo: {
-        path: '/static/img/tab-bar',
-        active: 'select',
-        notActive: 'unselect',
-      },
     }
   }
 }

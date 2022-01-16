@@ -1,7 +1,7 @@
 <template>
   <view class="item">
     <view class="item-img">
-      <img :src="tabBarItem.unselectImg">
+      <image :src="tabBarItem.unselectImg" />
     </view>
     <p>{{ tabBarItem.name }}</p>
   </view>
@@ -14,6 +14,8 @@ export default {
     tabBarItem: {
       type: Object
     }
+  },
+  created() {
   }
 }
 </script>
@@ -23,7 +25,12 @@ export default {
   height: inherit;
   width: inherit;
 
-  font-size: 10px;
+  font-size: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .item-img {
@@ -31,7 +38,8 @@ export default {
   height: inherit;
 }
 
-.item-img img {
+.item-img image {
   width: inherit;
+  height: inherit;
 }
 </style>

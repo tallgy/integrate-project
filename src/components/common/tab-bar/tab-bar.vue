@@ -1,6 +1,6 @@
 <template>
 	<view class="tab-bar">
-		<tab-bar-item class="tab-bar-item" v-for="item in tabBarList" :tab-bar-item="item"></tab-bar-item>
+			<tab-bar-item class="tab-bar-item"  v-for="item in tabBarList" :tab-bar-item="item"></tab-bar-item>
 	</view>
 </template>
 
@@ -35,14 +35,14 @@
 			tabBarItem
 		},
 		methods: {
-			// 图片路径初始化
+			// 图片路径初始化, 路径拼接有问题，拼好之后已经不能用了
 			imgInit() {
 				// 存在则初始化
 				if (this.imgInfo) {
 					this.tabBarList.forEach((value) => {
 						// 存在图片的名字，那么就会自动拼接图片
 						if (value.imgName) {
-							value.selectImg = pathJoin(this.imgInfo.path, value.imgName + '-' + this.imgInfo.active + '.' + (value.imgType ||
+              value.selectImg = pathJoin(this.imgInfo.path, value.imgName + '-' + this.imgInfo.active + '.' + (value.imgType ||
 								this.normalImgType))
 							value.unselectImg = pathJoin(this.imgInfo.path, value.imgName + '-' + this.imgInfo.notActive + '.' + (value.imgType ||
 								this.normalImgType))
@@ -56,14 +56,20 @@
 
 <style scoped>
 	.tab-bar {
+    position: fixed;
+    bottom: 0;
+
 		display: flex;
-    overflow-x: scroll;
-    width: 100vw;
+		overflow-x: scroll;
+		width: 100vw;
+		justify-content: center;
 	}
 
 	.tab-bar-item {
-		margin: 10px;
-		width: 60px;
-		flex-shrink: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 10px;
+    width: 30px;
+    height: 30px;
 	}
 </style>
