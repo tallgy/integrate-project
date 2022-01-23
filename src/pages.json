@@ -1,4 +1,16 @@
 {
+	"tabBar": {
+		"color": "#808080",
+		"selectedColor": "#007aff",
+		"backgroundColor": "#f8f8f8",
+		"list": [
+			{
+				"text": "主页",
+				"iconPath": "static/img/tab-bar/tab-bar-unselect.png",
+				"selectedIconPath": "static/img/tab-bar/tab-bar-select.png"
+			}
+		]
+	},
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
 			"path": "pages/index/index",
@@ -18,7 +30,7 @@
 		"list": [
 			{
 				"name": "", //模式名称
-				"path": "", //启动页面，必选
+				"path": "index", //启动页面，必选
 				"query": "" //启动参数，在页面的onLoad函数里面得到
 			}
 		]

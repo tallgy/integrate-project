@@ -12,7 +12,9 @@
 	}
 </script>
 
-<style>
+<style lang="scss">
+//@import "./src/uni.scss";
+
 	/*每个页面公共css */
   img {
     width: inherit;

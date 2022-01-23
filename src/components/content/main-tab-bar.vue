@@ -1,5 +1,5 @@
 <template>
-  <tab-bar :tab-bar-list="tabBarList"></tab-bar>
+  <tab-bar class="main" :tab-bar-list="tabBarList"></tab-bar>
 </template>
 
 <script>
@@ -14,16 +14,19 @@ export default {
     return {
       tabBarList: [
         {
+          id: 'home',
           name: '主页',
           selectImg: '../../static/img/tab-bar/tab-bar-select.png',
           unselectImg: '../../static/img/tab-bar/tab-bar-unselect.png',
         },
         {
+          id: 'function',
           name: '功能',
           selectImg: '../../static/img/tab-bar/tab-bar-select.png',
           unselectImg: '../../static/img/tab-bar/tab-bar-unselect.png', 
         },
         {
+          id: 'profile',
           name: '我的',
           selectImg: '../../static/img/tab-bar/tab-bar-select.png',
           unselectImg: '../../static/img/tab-bar/tab-bar-unselect.png',
@@ -34,6 +37,9 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+
+.main {
+}
 
 </style>

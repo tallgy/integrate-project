@@ -1,6 +1,10 @@
 <template>
 	<view class="content">
-    <mainTabBar></mainTabBar>
+    asdfasdf
+    <router-link to="/home">home</router-link>
+    <router-link to="/setting">setting</router-link>
+    <router-view style="width: 100%; height: 20px;"></router-view>
+		<mainTabBar></mainTabBar>
 	</view>
 </template>
 
@@ -25,7 +29,7 @@ import mainTabBar from '@/components/content/main-tab-bar'
 	}
 </script>
 
-<style>
+<style scoped lang="scss">
 	.content {
 		display: flex;
 		flex-direction: column;
